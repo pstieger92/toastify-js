@@ -50,6 +50,7 @@
       this.options.gravity = options.gravity === "bottom" ? "toastify-bottom" : "toastify-top"; // toast position - top or bottom
       this.options.positionLeft = options.positionLeft || false; // toast position - left or right
       this.options.position = options.position || ''; // toast position - left or right
+      this.options.color = options.color; // toast text color
       this.options.backgroundColor = options.backgroundColor; // toast background color
       this.options.avatar = options.avatar || ""; // img element src - url or a path
       this.options.className = options.className || ""; // additional class names for the toast
@@ -93,6 +94,11 @@
       if (this.options.backgroundColor) {
         divElement.style.background = this.options.backgroundColor;
       }
+
+      if (this.options.color) {
+        divElement.style.color = this.options.color;
+      }
+
 
       // Adding the toast message/node
       if (this.options.node && this.options.node.nodeType === Node.ELEMENT_NODE) {
